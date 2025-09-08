@@ -1,0 +1,9 @@
+Authlib
+fastapi
+httpx
+itsdangerous
+pydantic-settings
+python-dotenv
+uvicorn[standard]
+python-multipart
+uvicorn

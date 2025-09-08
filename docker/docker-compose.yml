@@ -1,12 +1,4 @@
 services:
-  echo_server:
-    image: jmalloc/echo-server
-    environment:
-      LOG_HTTP_BODY: 1
-      LOG_HTTP_HEADERS: 1
-    ports:
-      - 80:8080
-
   keycloak:
       build:
           context: .
@@ -23,6 +15,17 @@ services:
       volumes:
           - ./h2:/opt/keycloak/data/h2
       ports:
-          - 8024:8080
+          - 8080:8080
           - 9000:9000
           - 5005:5005
+  example-app:
+      build:
+        context: ./example
+      env_file:
+        - ./example/.env
+      volumes:
+        - type: bind
+          source: example/src
+          target: /app
+      ports:
+        - 8000:8000
