@@ -26,7 +26,7 @@ public class ExternalAuthenticatorFactory implements AuthenticatorFactory {
 
 	@Override
 	public String getDisplayType() {
-		return "External-HTTP-Authentication";
+		return "External HTTP Authentication";
 	}
 
 	@Override
