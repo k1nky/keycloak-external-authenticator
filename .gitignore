@@ -1,5 +1,6 @@
 target
 docker/h2
+.vscode
 
 docker/plugins/*
 !docker/plugins/.gitkeep
