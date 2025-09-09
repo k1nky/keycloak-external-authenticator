@@ -161,8 +161,8 @@ async def userinfo(request: Request, user: User = Depends(verify_user)):
 async def mfa(r: Request):
     json_body = await r.json()
     logging.info(f"MFA: {json_body}")
-    # if username == 'user2':
-    #     raise UnauthenticatedError()
+    if json_body['attributes']['username'] == 'user2':
+        raise UnauthenticatedError()
 
 
 async def main() -> None:
