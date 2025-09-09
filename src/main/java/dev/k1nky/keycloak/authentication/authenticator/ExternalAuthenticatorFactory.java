@@ -61,14 +61,13 @@ public class ExternalAuthenticatorFactory implements AuthenticatorFactory {
 		externalUrl.setLabel("External HTTP service URL");
 		externalUrl.setHelpText("");
 		externalUrl.setType(ProviderConfigProperty.STRING_TYPE);
-		externalUrl.setDefaultValue("");
 
 		ProviderConfigProperty externalTimeout = new ProviderConfigProperty();
 		externalTimeout.setName(Constants.EXTERNAL_TIMEOUT_KEY);
-		externalTimeout.setLabel("External HTTP service call timeout");
+		externalTimeout.setLabel("External HTTP service call timeout (in ms)");
 		externalTimeout.setHelpText("");
 		externalTimeout.setType(ProviderConfigProperty.STRING_TYPE);
-		externalTimeout.setDefaultValue(Constants.DEFAULT_EXTERNAL_TIMEOUT);
+		externalTimeout.setDefaultValue(Constants.DEFAULT_EXTERNAL_TIMEOUT_MS);
 
 		return List.of(externalUrl, externalTimeout);
 	}

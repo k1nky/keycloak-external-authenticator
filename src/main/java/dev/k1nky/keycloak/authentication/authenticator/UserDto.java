@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * @author Andrey Shalashov, https://github.com/k1nky, @k1nky
  */
-public class UserDto {
+ public class UserDto {
 
     public UserDto(List<String> groups, List<String> roles, Map<String, String> attributes) {
         this.groups = groups;
