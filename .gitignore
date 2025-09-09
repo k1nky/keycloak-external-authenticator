@@ -5,4 +5,4 @@ docker/h2
 docker/plugins/*
 !docker/plugins/.gitkeep
 
-_pycache__
+__pycache__
