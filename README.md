@@ -4,6 +4,8 @@
 
 The extension can be used in Keycloak authentication flows and allows calling an external service via HTTP. A typical use case is when user authentication requires not only login and passwords, but also confirmation from an external service. For example, an external service sends a push notification and checks the response to it.
 
+### Example
+
 You have an authentication flow consisting of the following steps:
 1. User validation
 2. Password
@@ -34,13 +36,13 @@ cp target/*.jar /path/to/keycloak/providers/
 ## Configuration
 
 1. Create or select an authentication flow.
-2. Add an "External HTTP Authentication" step.
-3. Set the "External service URL" setting and other parameters.
+2. Add an `External HTTP Authentication` step.
+3. Set the `External service URL` setting and other parameters.
 
 ### Settings
 
-* External HTTP service URL - URL of your service to which the POST request will be sent
-* External HTTP service call timeout (in ms) - request timeout
+* `External HTTP service URL` - URL of your service to which the POST request will be sent
+* `External HTTP service call timeout (in ms)` - request timeout
 
 ## Payload
 
@@ -50,7 +52,8 @@ The extension sends a POST request with a JSON payload:
 {
     'roles': ['role1', 'role2', ...],
     'attributes': {'myattribute': 'somevalue', 'username': 'user1', ...},
-    'groups': ['group1', 'group2', ...]}
+    'groups': ['group1', 'group2', ...]
+}
 ```
 
 ## External service
